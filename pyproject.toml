@@ -43,6 +43,9 @@ dependencies = [
     # InputTokensDetails that openai-agents 0.17.3 does not set, crashing
     # usage parsing on every response (issue #187). Pin below 2.45 until
     # openai-agents catches up.
+    # 中文：openai 2.45.0 为 InputTokensDetails 新增了必填字段
+    # `cache_write_tokens`，但 openai-agents 0.17.3 尚未设置该字段，导致每次响应
+    # 的用量解析都会崩溃（issue #187）。在 openai-agents 跟进修复前固定使用 2.45 以下版本。
     "openai==2.44.0",
     "pyyaml==6.0.3",
     "python-dotenv==1.2.2",
