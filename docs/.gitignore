@@ -1,8 +1,13 @@
-# Default-closed: docs/ content stays out of git unless explicitly
-# allowlisted below. This repo publishes code, not design/spec docs — the
-# allowlist restores the safety net the old blanket `docs/` ignore provided,
-# so a doc accidentally written outside docs/internal/ can't be swept into a
-# commit by `git add -A`. To publish a new doc, add a `!its-name.md` line.
+# 默认关闭：docs/ 下内容不进 git，除非在下方白名单显式放行。
+# 本仓库以发布代码为主，而非设计/规格文档——白名单沿用了旧版整目录
+# 忽略 `docs/` 时的安全网，避免误写在 docs/internal/ 之外的文档被
+# `git add -A` 扫进提交。要发布新文档，请加一行 `!文件名.md`。
 *
 !.gitignore
 !golden-principles.md
+!golden-principles.zh-CN.md
+
+!fly-docs/
+!fly-docs/*.md
+!openkb-tutorial/
+!openkb-tutorial/*.md
